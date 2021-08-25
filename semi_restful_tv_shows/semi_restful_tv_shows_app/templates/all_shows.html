@@ -29,10 +29,8 @@
                     <td>{{show.network}}</td>
                     <td>{{show.release_date}}</td>
                     <td>
-                        <!-- fix <a> paths -->
-                        <!-- <a href="/shows/show_details/{{show.id}}">Show</a> -->
-                        <a href="shows/show_details/{{show.id}}">Show</a>
-                        <a href="shows/{show.id}/edit">Edit</a>
+                        <a href="/show_details/{{show.id}}">Show</a>
+                        <a href="/shows/{{show.id}}/edit">Edit</a>
                         <a href="/shows/{{show.id}}/destroy">Delete</a>
                     </td>
                 </tr>

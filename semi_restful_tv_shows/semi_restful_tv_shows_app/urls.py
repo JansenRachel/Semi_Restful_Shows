@@ -11,10 +11,8 @@ urlpatterns = [
 # this path is for '<int:show_id>'
     path('show_details/<int:show_id>', views.display_show_info),
 
-    path('<int:show_id>/destroy', views.delete_show),
+    path('shows/<int:show_id>/destroy', views.delete_show),
     path('shows/<int:show_id>/edit', views.edit_show),
-        # path('<int:show_id>/update', views.update_show),
-
-
+    path('<int:show_id>/update', views.update_show),
 
 ]
