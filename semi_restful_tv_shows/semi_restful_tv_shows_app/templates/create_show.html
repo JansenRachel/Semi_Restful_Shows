@@ -11,8 +11,11 @@
 </head>
 <body>
     <div id="wrapper">
-        <a href="shows">Go Back</a>
-        <form action="/shows/create" method="POST">
+        <!-- fix <a> link -->
+        <a href="/">Go Back</a>
+        
+        <!-- <form action="/create" method="POST"> -->
+        <form action="createShow" method="POST">
         {% csrf_token %}
             <h1>Add a New Show</h1>
             <div class="form-group">
@@ -31,8 +34,9 @@
                 <label for="description">Description</label>
                 <textarea class="form-control" name="desc" id="showdesc" rows="3"></textarea>
             </div>
+            <!-- <input type="hidden" name="show" value="{{show_id}}"> -->
             <input type="hidden" name="show" value="{{show_id}}">
-            
+            <!-- we are creating a new show, this hidden input cannot provide POST info with an ID if it hasn't been created yet -->
             <button type="submit" class="btn btn-primary">Create</button>
         </form>
     </div>

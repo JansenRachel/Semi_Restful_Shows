@@ -11,20 +11,20 @@
 <body>
     <div id="wrapper">
         <a href="/">Go Back</a>
-        <!-- {% for show in shows %} -->
 
-        <h1>TV Show {{show.id}}</h1>
-        <p>Title: {{show.title}}</p>
-        <p>Network: {{show.network}}</p>
-        <p>Release Date: {{show.release_date}}</p>
-        <p>Description: {{show.desc}}</p>
+        <h1>TV Show {{shows.id}}</h1>
+        <p>Title: {{shows.title}}</p>
+        <p>Network: {{shows.network}}</p>
+        <p>Release Date: {{shows.release_date}}</p>
+        <p>Description: {{shows.desc}}</p>
         
-        <p>Last Updated: {{show.updated_at}}</p>
+        <p>Last Updated: {{shows.updated_at}}</p>
 
-        <!-- {% endfor %} -->
         <!-- fix <a> paths -->
+            <!-- <a href="/shows/{{show.id}}/edit">Edit</a> -->
+            <a href="/shows/{{show.id}}/destroy">Delete</a>
         <a href="show_id/edit">Edit</a>
-        <a href="show_id/destroy">Delete</a> 
+        <!-- <a href="show_id/destroy">Delete</a>  -->
     </div>
 </body>
 </html>

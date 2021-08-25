@@ -2,15 +2,19 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.display_all_shows),
-    # path('<int:show_id>/destroy', views.delete_show),
-    # path('<int:show_id>/update', views.update_show),
+    path('', views.index),
+    path('shows', views.display_all_shows),
 
-    path('new', views.add_show_form),
-    path('create', views.create_new_show),
+    path('shows/new', views.add_show_form),
+    path ('shows/createShow', views.create_new_show),
 
-    path('<int:show_id>', views.display_show_info),
+# this path is for '<int:show_id>'
+    path('show_details/<int:show_id>', views.display_show_info),
 
-    path('<int:show_id>/edit', views.edit_show),
+    path('<int:show_id>/destroy', views.delete_show),
+    path('shows/<int:show_id>/edit', views.edit_show),
+        # path('<int:show_id>/update', views.update_show),
+
+
 
 ]

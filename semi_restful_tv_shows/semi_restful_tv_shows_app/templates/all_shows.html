@@ -10,7 +10,6 @@
 </head>
 <body>
     <div id="wrapper">
-        <a href="/">Go Back</a>
         <h1>All Shows</h1>
         <table>
             <thead>
@@ -31,13 +30,15 @@
                     <td>{{show.release_date}}</td>
                     <td>
                         <!-- fix <a> paths -->
-                        <a href="/shows/{{show.id}}">Show</a>
-                        <a href="/shows/{{show.id}}/edit">Edit</a>
-                        <a href="/shows">Delete</a>
+                        <!-- <a href="/shows/show_details/{{show.id}}">Show</a> -->
+                        <a href="shows/show_details/{{show.id}}">Show</a>
+                        <a href="shows/{show.id}/edit">Edit</a>
+                        <a href="/shows/{{show.id}}/destroy">Delete</a>
                     </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+        <a href="shows/new">Add a New Show</a>
 </body>
 </html>
